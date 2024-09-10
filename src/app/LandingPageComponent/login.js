@@ -44,6 +44,8 @@ const LoginModal = ({ onClose }) => {
                 </button>
 
                 <h2 className="text-3xl font-bold text-gray-700 mb-6 text-center">Login</h2>
+                <p className='text-green-800 mb-6'>Username: Nayeem || Password: password </p>
+                        
                 {isLoggedIn ? (
                     <div className="flex flex-col items-center">
                         <AiOutlineClose className="text-green-600 text-5xl mb-4" />
