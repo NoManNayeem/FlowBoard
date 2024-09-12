@@ -30,7 +30,7 @@
   - **Delete tasks** by selecting and removing them from the board.
 - **Backend Integration**: Ensure all actions (create, update, delete, status change) on the board are integrated with the backend API for data consistency.
 
-
+[Watch the video on YouTube](https://youtu.be/D03crFUKUGg)
 
 
 This project comprises two main components:
