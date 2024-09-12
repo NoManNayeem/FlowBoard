@@ -1,0 +1,47 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - CompleteProject  # Trigger this workflow for changes to the CompleteProject branch
+  pull_request:
+    branches:
+      - CompleteProject
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies (Frontend)
+        run: |
+          cd FlowBoard
+          npm install
+
+      - name: Run frontend tests
+        run: |
+          cd FlowBoard
+          npm test
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies (Backend)
+        run: |
+          cd FlowBoard_BE
+          pip install -r requirements.txt
+
+      - name: Run backend tests
+        run: |
+          cd FlowBoard_BE
+          pytest
