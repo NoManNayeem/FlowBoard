@@ -1,0 +1,22 @@
+# Node modules and build output
+FlowBoard/node_modules/
+FlowBoard/.next/
+
+
+
+# Environment files
+*.env
+venv/
+
+# Django
+*.pyc
+__pycache__/
+db.sqlite3
+FlowBoard_BE/django_debug.log
+
+# Virtual environment
+venv/
+
+# System files
+.DS_Store
+Thumbs.db

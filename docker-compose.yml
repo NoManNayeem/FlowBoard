@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./FlowBoard_BE
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./FlowBoard_BE:/app
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+
+  frontend:
+    build: ./FlowBoard
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./FlowBoard:/app
+    environment:
+      - NODE_ENV=production

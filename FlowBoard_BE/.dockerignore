@@ -1,0 +1,16 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+build
+develop-eggs
+dist
+downloads
+eggs
+.parts
+sdist
+var
+*.egg-info
+.installed.cfg
+*.egg
